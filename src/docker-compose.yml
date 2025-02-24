@@ -1,0 +1,17 @@
+networks:
+  app_network:
+    driver: bridge
+services:
+  categories_db:
+    image: pavelmernov/my_lib_img:latest
+    container_name: mernov_db_react
+    environment:
+      POSTGRES_USER: pavelmernov
+      POSTGRES_PASSWORD: 555555
+      POSTGRES_DB: mernov-react-hw5-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - mernov-hw5-vol:/var/lib/postgresql/data
+volumes:
+    mernov-hw5-vol:

@@ -1,0 +1,25 @@
+{
+  "name": "mernov-hw5",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "docker compose -f src/docker-compose.yml up -d",
+    "start": "ts-node src/server.ts",
+    "stop": "docker compose -f src/docker-compose.yml down"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/pg": "^8.11.11",
+    "express": "^4.21.2",
+    "pg": "^8.13.3",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.4"
+  }
+}
